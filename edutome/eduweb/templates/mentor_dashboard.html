@@ -660,39 +660,6 @@ main .recent-orders a {
           <span class="material-icons-sharp"> dashboard </span>
           <h3>Mentee Dashboard</h3>
         </a>
-        <!-- <a href="#">
-          <span class="material-icons-sharp"> person_outline </span>
-          <h3>Customers</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> receipt_long </span>
-          <h3>Orders</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> insights </span>
-          <h3>Analytics</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> mail_outline </span>
-          <h3>Messages</h3>
-          <span class="message-count">26</span>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> inventory </span>
-          <h3>Products</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> report_gmailerrorred </span>
-          <h3>Reports</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> settings </span>
-          <h3>Settings</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"> add </span>
-          <h3>Add Product</h3>
-        </a> -->
         <a href="/logout">
           <span class="material-icons-sharp"> logout </span>
           <h3>Logout</h3>
@@ -702,77 +669,6 @@ main .recent-orders a {
 
     <main>
       <h1>Mentor Dashboard</h1>
-
-      <!-- <div class="date">
-        <input type="date" />
-      </div> -->
-
-      <!-- <div class="insights"> -->
-        <!-- SALES -->
-        <!-- <div class="sales">
-          <span class="material-icons-sharp"> analytics </span>
-          <div class="middle">
-            <div class="left">
-              <h3>Total Sales</h3>
-              <h1>$25,024</h1>
-            </div>
-            <div class="progress">
-              <svg>
-                <circle cx="38" cy="38" r="36"></circle>
-              </svg>
-              <div class="number">
-                <p>81%</p>
-              </div>
-            </div>
-          </div>
-          <small class="text-muted"> Last 24 hours </small>
-        </div> -->
-
-        <!-- EXPENSES -->
-        <!-- <div class="expenses">
-          <span class="material-icons-sharp"> bar_chart </span>
-          <div class="middle">
-            <div class="left">
-              <h3>Total Expenses</h3>
-              <h1>$14,160</h1>
-            </div>
-            <div class="progress">
-              <svg>
-                <circle cx="38" cy="38" r="36"></circle>
-              </svg>
-              <div class="number">
-                <p>62%</p>
-              </div>
-            </div>
-          </div>
-          <small class="text-muted"> Last 24 hours </small>
-        </div> -->
-
-        <!-- INCOME -->
-        <!-- <div class="income">
-          <span class="material-icons-sharp"> stacked_line_chart </span>
-          <div class="middle">
-            <div class="left">
-              <h3>Total Income</h3>
-              <h1>$10,864</h1>
-            </div>
-            <div class="progress">
-              <svg>
-                <circle cx="38" cy="38" r="36"></circle>
-              </svg>
-              <div class="number">
-                <p>44%</p>
-              </div>
-            </div>
-          </div>
-          <small class="text-muted"> Last 24 hours </small>
-        </div> -->
-      <!-- </div> -->
-
-      <!-- ... (existing HTML code) ... -->
-
-      <!-- /////////////////////////////////////////// -->
-      <!-- corrected -->
 
       <div class="recent-orders">
         <h2>Your Classes</h2>
@@ -790,7 +686,6 @@ main .recent-orders a {
               <th></th>
             </tr>
           </thead>
-          <!-- JS insertion for tbody -->
           <tbody>
             {% for class in classes %}
               <tr>
@@ -799,7 +694,6 @@ main .recent-orders a {
                 <td>{{ class.get('date') }}</td>
                 <td>{{ class.get('time_slot') }}</td>
                 <td>{{ class.get('semester') }}</td>
-                <!-- <td>{{ class.get('rating') }}</td> -->
                 <td>{{ class.get('duration') }}</td>
                 <td>
                   <a href="{{ class.get('joining_link')}}">Joining Link</a>
@@ -810,11 +704,6 @@ main .recent-orders a {
         </table>
       </div>
 
-      <!-- /////////////////////////////////////////// -->
-      <!-- corrected end -->
-
-<!-- ... (existing HTML code) ... -->
-
     </main>
 
     <div class="right">
@@ -822,10 +711,6 @@ main .recent-orders a {
         <button id="menu-btn">
           <span class="material-icons-sharp"> menu </span>
         </button>
-        <!-- <div class="theme-toggler">
-          <span class="material-icons-sharp active"> light_mode </span>
-          <span class="material-icons-sharp"> dark_mode </span>
-        </div> -->
         <div class="profile">
           <div class="info">
             <p>Hey, <b>{{ mentor.get('fullname')}}</b></p>
@@ -863,19 +748,6 @@ main .recent-orders a {
           <input type="submit" value="Add Class">
       </form>
       </div>
-
-      <!-- <div class="sales-analytics">
-        <h2>Adds</h2>
-        <div id="analytics">
-          
-        </div>
-        <div class="item add-product">
-          <div>
-            <span class="material-icons-sharp"> add </span>
-            <h3>Add Product</h3>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 
