@@ -9,8 +9,8 @@
   <!-- 
     - primary meta tag
   -->
-  <title>EduWeb - The Best Program to Enroll for Exchange</title>
-  <meta name="title" content="EduWeb - The Best Program to Enroll for Exchange">
+  <title>EduTome</title>
+  <meta name="title" content="EduTome">
   <meta name="description" content="This is an education html template made by codewithsadee">
 
   <!-- 
@@ -21,10 +21,8 @@
   <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <style>
-    
-  </style>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
 
   <!-- 
     - google font link
@@ -38,11 +36,11 @@
   <!-- 
     - preload images
   -->
-  <link rel="preload" as="image" href="./assets/images/hero-bg.svg">
-  <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
-  <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
+  <link rel="preload" as="image" href="{{url_for('static', filename='images/hero-bg.svg')}}">
+  <link rel="preload" as="image" href="{{url_for('static', filename='images/hero-banner-1.jpg')}}">
+  <link rel="preload" as="image" href="{{url_for('static', filename='images/hero-banner-2.jpg')}}">
+  <link rel="preload" as="image" href="{{url_for('static', filename='images/hero-shape-1.svg')}}">
+  <link rel="preload" as="image" href="{{url_for('static', filename='images/hero-shape-2.png')}}">
 
 </head>
 
@@ -56,14 +54,14 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo">
+        <img src="{{url_for('static', filename='images/eduTome.png')}}" width="200" height="100" alt="eduTome logo">
       </a>
 
       <nav class="navbar" data-navbar>
 
         <div class="wrapper">
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo">
+            <img src="{{url_for('static', filename='images/eduTome.svg')}}" width="162" height="50" alt="EduTome logo">
           </a>
 
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
@@ -82,11 +80,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#courses" class="navbar-link" data-nav-link>Courses</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+            <a href="#courses" class="navbar-link" data-nav-link>Testimonials</a>
           </li>
 
           <li class="navbar-item">
@@ -99,19 +93,10 @@
 
       <div class="header-actions">
 
-        <!-- <button class="header-action-btn" aria-label="toggle search" title="Search">
-          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-        </button> -->
-
-        <!-- <button class="header-action-btn" aria-label="cart" title="Cart">
-          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
-
-          <span class="btn-badge">0</span>
-        </button> -->
 
         <a href="login" class="btn has-before">
           <!-- <a href="./login.html"></a> -->
-          <span class="span">Sign Up</span>
+          <span class="span">Sign In</span>
 
           <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
         </a>
@@ -139,21 +124,21 @@
       -->
 
       <section class="section hero has-bg-image" id="home" aria-label="home"
-        style="background-image: url('./assets/images/hero-bg.svg')">
+        style="background-image: url_for('static', filename='images/hero-bg.svg')">
         <div class="container">
 
           <div class="hero-content">
 
             <h1 class="h1 section-title">
-              The Best Program to <span class="span">Enroll</span> for Exchange
+              The Best Platform to rely on for <span class="span">Quality Learning!</span>
             </h1>
 
             <p class="hero-text">
-              Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.
+              Join us to gear up for your college exams with your seniors.
             </p>
 
-            <a href="#" class="btn has-before">
-              <span class="span">Find courses</span>
+            <a href="login" class="btn has-before">
+              <span class="span">Join us</span>
 
               <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
             </a>
@@ -163,16 +148,16 @@
           <figure class="hero-banner">
 
             <div class="img-holder one" style="--width: 270; --height: 300;">
-              <img src="./assets/images/hero-banner-1.jpg" width="270" height="300" alt="hero banner" class="img-cover">
+              <img src="{{url_for('static', filename='images/hero-banner-1.jpg')}}" width="270" height="300" alt="hero banner" class="img-cover">
             </div>
 
             <div class="img-holder two" style="--width: 240; --height: 370;">
-              <img src="./assets/images/hero-banner-2.jpg" width="240" height="370" alt="hero banner" class="img-cover">
+              <img src="{{url_for('static', filename='images/hero-banner-2.jpg')}}" width="240" height="370" alt="hero banner" class="img-cover">
             </div>
 
-            <img src="./assets/images/hero-shape-1.svg" width="380" height="190" alt="" class="shape hero-shape-1">
+            <img src="{{url_for('static', filename='images/hero-shape-1.svg')}}" width="380" height="190" alt="" class="shape hero-shape-1">
 
-            <img src="./assets/images/hero-shape-2.png" width="622" height="551" alt="" class="shape hero-shape-2">
+            <img src="{{url_for('static', filename='images/hero-shape-2.png')}}" width="622" height="551" alt="" class="shape hero-shape-2">
 
           </figure>
 
@@ -190,14 +175,14 @@
       <section class="section category" aria-label="category">
         <div class="container">
 
-          <p class="section-subtitle">Categories</p>
+          <!-- <p class="section-subtitle">Categories</p> -->
 
           <h2 class="h2 section-title">
-            Online <span class="span">Classes</span> For Remote Learning.
+            Benefits of <span class="span">EduTome</span> Come Learn With Us
           </h2>
 
           <p class="section-text">
-            Consectetur adipiscing elit sed do eiusmod tempor.
+            <!-- Consectetur adipiscing elit sed do eiusmod tempor. -->
           </p>
 
           <ul class="grid-list">
@@ -206,19 +191,18 @@
               <div class="category-card" style="--color: 170, 75%, 41%">
 
                 <div class="card-icon">
-                  <img src="./assets/images/category-1.svg" width="40" height="40" loading="lazy"
+                  <img src="{{url_for('static', filename='images/category-1.svg')}}" width="40" height="40" loading="lazy"
                     alt="Online Degree Programs" class="img">
                 </div>
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">Online Degree Programs</a>
+                  <a href="#" class="card-title">Learn from your seniors</a>
                 </h3>
 
                 <p class="card-text">
-                  Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                </p>
+                  Seniors can provide valuable insights and perspectives that may resonate better with juniors.
 
-                <span class="card-badge">7 Courses</span>
+               
 
               </div>
             </li>
@@ -227,19 +211,19 @@
               <div class="category-card" style="--color: 351, 83%, 61%">
 
                 <div class="card-icon">
-                  <img src="./assets/images/category-2.svg" width="40" height="40" loading="lazy"
+                  <img src="{{url_for('static', filename='images/category-2.svg')}}" width="40" height="40" loading="lazy"
                     alt="Non-Degree Programs" class="img">
                 </div>
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">Non-Degree Programs</a>
+                  <a href="#" class="card-title">Teach your Juniors</a>
                 </h3>
 
                 <p class="card-text">
-                  Lorem ipsum dolor consec tur elit adicing sed umod tempor.
+                  Seniors can reinforce their own understanding of subjects by teaching them to thier juniors.
                 </p>
 
-                <span class="card-badge">4 Courses</span>
+                
 
               </div>
             </li>
@@ -248,40 +232,20 @@
               <div class="category-card" style="--color: 229, 75%, 58%">
 
                 <div class="card-icon">
-                  <img src="./assets/images/category-3.svg" width="40" height="40" loading="lazy"
+                  <img src="{{url_for('static', filename='images/category-3.svg')}}" width="40" height="40" loading="lazy"
                     alt="Off-Campus Programs" class="img">
                 </div>
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">Off-Campus Programs</a>
+                  <a href="#" class="card-title">Promotes a Growth Mindset:</a>
                 </h3>
 
                 <p class="card-text">
-                  Lorem ipsum dolor consec tur elit adicing sed umod tempor.
+                  
+                  We encourage a growth mindset by reinforcing  the idea that learning is an ongoing process.
                 </p>
 
-                <span class="card-badge">8 Courses</span>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="category-card" style="--color: 42, 94%, 55%">
-
-                <div class="card-icon">
-                  <img src="./assets/images/category-4.svg" width="40" height="40" loading="lazy"
-                    alt="Hybrid Distance Programs" class="img">
-                </div>
-
-                <h3 class="h3">
-                  <a href="#" class="card-title">Hybrid Distance Programs</a>
-                </h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor consec tur elit adicing sed umod tempor.
-                </p>
-
-                <span class="card-badge">8 Courses</span>
+                
 
               </div>
             </li>
@@ -305,17 +269,17 @@
           <figure class="about-banner">
 
             <div class="img-holder" style="--width: 520; --height: 370;">
-              <img src="./assets/images/about-banner.jpg" width="520" height="370" loading="lazy" alt="about banner"
+              <img src="{{url_for('static', filename='images/about-banner.jpg')}}" width="520" height="370" loading="lazy" alt="about banner"
                 class="img-cover">
             </div>
 
-            <img src="./assets/images/about-shape-1.svg" width="360" height="420" loading="lazy" alt=""
+            <img src="{{url_for('static', filename='images/about-shape-1.svg')}}" width="360" height="420" loading="lazy" alt=""
               class="shape about-shape-1">
 
-            <img src="./assets/images/about-shape-2.svg" width="371" height="220" loading="lazy" alt=""
+            <img src="{{url_for('static', filename='images/about-shape-2.svg')}}" width="371" height="220" loading="lazy" alt=""
               class="shape about-shape-2">
 
-            <img src="./assets/images/about-shape-3.png" width="722" height="528" loading="lazy" alt=""
+            <img src="{{url_for('static', filename='images/about-shape-3.svg')}}" width="722" height="528" loading="lazy" alt=""
               class="shape about-shape-3">
 
           </figure>
@@ -325,13 +289,12 @@
             <p class="section-subtitle">About Us</p>
 
             <h2 class="h2 section-title">
-              Over 10 Years in <span class="span">Distant learning</span> for Skill Development
+              
+              We Believe in <span class="span"> Shaping Skills</span> and Forging Futures.
             </h2>
 
             <p class="section-text">
-              Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod ex tempor incididunt labore dolore magna
-              aliquaenim ad
-              minim.
+              Edutome is not just an online learning platform; it's a vibrant community where seniors take the lead in shaping the educational journey of juniors.
             </p>
 
             <ul class="about-list">
@@ -339,24 +302,24 @@
               <li class="about-item">
                 <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
 
-                <span class="span">Expert Trainers</span>
+                <span class="span">Community-driven Learning</span>
               </li>
 
               <li class="about-item">
                 <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
 
-                <span class="span">Online Remote Learning</span>
+                <span class="span">Tailored Guidance</span>
               </li>
 
               <li class="about-item">
                 <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
 
-                <span class="span">Lifetime Access</span>
+                <span class="span">Building Connections</span>
               </li>
 
             </ul>
 
-            <img src="./assets/images/about-shape-4.svg" width="100" height="100" loading="lazy" alt=""
+            <img src="{{url_for('static', filename='images/about-shape-4.svg')}}" width="100" height="100" loading="lazy" alt=""
               class="shape about-shape-4">
 
           </div>
@@ -375,183 +338,55 @@
       <section class="section course" id="courses" aria-label="course">
         <div class="container">
 
-          <p class="section-subtitle">Popular Courses</p>
+          <p class="section-subtitle">Testimonials</p>
 
-          <h2 class="h2 section-title">Pick A Course To Get Started</h2>
+          <h2 class="h2 section-title">Hear it from our Users!</h2>
 
           <ul class="grid-list">
 
             <li>
               <div class="course-card">
 
-                <!-- <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                  <img src="./assets/images/course-1.jpg" width="370" height="220" loading="lazy"
-                    alt="Build Responsive Real- World Websites with HTML and CSS" class="img-cover">
-                </figure> -->
 
                 <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  
 
-                  <span class="span">3 Weeks</span>
+                  <span class="span">Junior at IGDTUW</span>
                 </div>
 
                 <div class="card-content">
 
-                  <span class="badge">Beginner</span>
+                  <span class="badge">ECE</span>
 
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Build Responsive Real- World Websites with HTML and CSS</a>
-                  </h3>
+                  <h3 class="h4">
+                    "Edutome has been a game-changer for me. The peer mentorship model allowed me to learn directly from seniors.
+                  </h4>
 
-                  <div class="wrapper">
+                  <data class="price" value="29">Shreya Taneja</data>
+            <li>
+              <div class="course-card">
 
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
+                
+                <div class="abs-badge">
+                  
 
-                    <p class="rating-text">(5.0/7 Rating)</p>
+                  <span class="span">Fresher at IGDTUW</span>
+                </div>
 
-                  </div>
+                <div class="card-content">
 
-                  <data class="price" value="29">$29.00</data>
+                  <span class="badge">ECE-AI</span>
 
-                  <ul class="card-meta-list">
+                  <h3 class="h4">
+                    "Being part of Edutome was a revelation. The seniors' teaching approach made complex subjects feel easy!"
+                  </h4>
 
-                    <li class="card-meta-item">
-                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">8 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">20 Students</span>
-                    </li>
-
-                  </ul>
+                  <data class="price" value="29">Sejal Jain</data>
 
                 </div>
 
               </div>
             </li>
-
-            <!-- <li>
-              <div class="course-card">
-
-                <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                  <img src="./assets/images/course-2.jpg" width="370" height="220" loading="lazy"
-                    alt="Java Programming Masterclass for Software Developers" class="img-cover">
-                </figure>
-
-                <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span class="span">8 Weeks</span>
-                </div>
-
-                <div class="card-content">
-
-                  <span class="badge">Advanced</span>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Java Programming Masterclass for Software Developers</a>
-                  </h3>
-
-                  <div class="wrapper">
-
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">(4.5 /9 Rating)</p>
-
-                  </div>
-
-                  <data class="price" value="49">$49.00</data>
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">15 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">35 Students</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-            </li> -->
-
-            <li>
-              <div class="course-card">
-
-                <!-- <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-                  <img src="./assets/images/course-3.jpg" width="370" height="220" loading="lazy"
-                    alt="The Complete Camtasia Course for Content Creators" class="img-cover">
-                </figure> -->
-
-                <div class="abs-badge">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <span class="span">3 Weeks</span>
-                </div>
-
-                <div class="card-content">
-
-                  <span class="badge">Intermediate</span>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">The Complete Camtasia Course for Content Creators</a>
-                  </h3>
-
-                  <div class="wrapper">
-
-                    <div class="rating-wrapper">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                    <p class="rating-text">(4.9 /7 Rating)</p>
-
-                  </div>
-
-                  <data class="price" value="35">$35.00</data>
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">13 Lessons</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">18 Students</span>
-                    </li>
-
-                  </ul>
 
                 </div>
 
@@ -560,8 +395,8 @@
 
           </ul>
 
-          <a href="#" class="btn has-before">
-            <span class="span">Browse more courses</span>
+          <a href="login" class="btn has-before">
+            <span class="span">Become one of us!</span>
 
             <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
           </a>
@@ -578,24 +413,24 @@
       -->
 
       <section class="video has-bg-image" aria-label="video"
-        style="background-image: url('./assets/images/video-bg.png')">
+        style="background-image: url_for('static', filename='images/video-bg.png')">
         <div class="container">
 
           <div class="video-card">
 
             <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
-              <img src="./assets/images/video-banner.jpg" width="970" height="550" loading="lazy" alt="video banner"
+              <img src="{{url_for('static', filename='images/video-banner.jpg')}}" width="970" height="550" loading="lazy" alt="video banner"
                 class="img-cover">
 
-              <button class="play-btn" aria-label="play video">
-                <ion-icon name="play" aria-hidden="true"></ion-icon>
-              </button>
+              <!-- <button class="play-btn" aria-label="play video">
+                 <ion-icon name="play" aria-hidden="true"></ion-icon> 
+              </button> -->
             </div>
 
-            <img src="./assets/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
+            <img src="{{url_for('static', filename='images/video-shape-1.png')}}" width="1089" height="605" loading="lazy" alt=""
               class="shape video-shape-1">
 
-            <img src="./assets/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
+            <img src="{{url_for('static', filename='images/video-shape-2.png')}}" width="158" height="174" loading="lazy" alt=""
               class="shape video-shape-2">
 
           </div>
@@ -669,18 +504,18 @@
     - #FOOTER
   -->
 
-  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+  <footer class="footer" style="background-image: url_for('static', filename='images/footer-bg.png')">
 
     <div class="footer-top section">
       <div class="container grid-list">
 
         <div class="footer-brand">
 
-          <a href="#" class="logo">
-            <img src="./assets/images/logo-light.svg" width="162" height="50" alt="EduWeb logo">
-          </a>
+          <!-- <a href="#" class="logo">
+            <img src="./assets/images/eduTome.png" width="162" height="50" alt="EduWeb logo">
+          </a> -->
 
-          <p class="footer-brand-text">
+          <!-- <p class="footer-brand-text">
             Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
           </p>
 
@@ -700,7 +535,7 @@
             <span class="span">Email:</span>
 
             <a href="mailto:info@eduweb.com" class="footer-link">info@eduweb.com</a>
-          </div>
+          </div> -->
 
         </div>
 
@@ -759,7 +594,7 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Sign In/Registration</a>
+            <a href="/login" class="footer-link">Sign In/Registration</a>
           </li>
 
           <li>
@@ -828,9 +663,7 @@
     <div class="footer-bottom">
       <div class="container">
 
-        <p class="copyright">
-          Copyright 2022 All Rights Reserved by <a href="#" class="copyright-link">codewithsadee</a>
-        </p>
+       
 
       </div>
     </div>
@@ -853,11 +686,8 @@
 
 
 
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js" defer></script>
 
+  <script src="{{url_for('static',filename='js/script.js')}}" defer></script>
   <!-- 
     - ionicon link
   -->

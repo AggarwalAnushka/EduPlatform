@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentee Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+  <link rel="stylesheet" href="{{url_for('static',filename='css/mentee_dashboard.css')}}">
+
+</head>
+
+<body>
+  <div class="container">
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <h2>EDU<span class="danger">TOME</span></h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-icons-sharp"> close </span>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <a href="/dashboard" class="active">
+          <span class="material-icons-sharp">dashboard </span>
+          <h3>Main Dashboard</h3>
+        </a>
+        <a href="/mentor/{{user_email}}" class="active">
+          <span class="material-icons-sharp"> dashboard </span>
+          <h3>Mentor Dashboard</h3>
+        </a>
+        
+        <a href="/logout">
+          <span class="material-icons-sharp"> logout </span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <h1>Mentee Dashboard</h1>
+
+
+      <div class="recent-orders">
+        <h2>All Classes</h2>
+        <table id="recent-orders--table">
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Mentor</th>
+              <th>Date</th>
+              <th>Time Slot</th>
+              <th>Semester</th>
+              <!-- <th>Rating</th> -->
+              <th>Duration</th>
+              <!-- <th>Joining Link</th> -->
+              <th></th>
+            </tr>
+          </thead>
+          <!-- JS insertion for tbody -->
+          <tbody>
+            {% for class_data in all_classes %}
+              <tr>
+                <td>{{ class_data.get('topic') }}</td>
+                <td>{{ class_data.get('mentor_name') }}</td>
+                <td>{{ class_data.get('date') }}</td>
+                <td>{{ class_data.get('time_slot') }}</td>
+                <td>{{ class_data.get('semester') }}</td>
+                <td>{{ class_data.get('duration') }}</td>
+                <td>
+                  <a href="{{ class_data.get('joining_link')}}">Joining Link</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+    <div class="right">
+      <div class="top">
+        <button id="menu-btn">
+          <span class="material-icons-sharp"> menu </span>
+        </button>
+        <!-- <div class="theme-toggler">
+          <span class="material-icons-sharp active"> light_mode </span>
+          <span class="material-icons-sharp"> dark_mode </span>
+        </div> -->
+        <div class="profile">
+          <div class="info">
+            <p>Hey, <b>{{ user_email}}</b></p>
+          </div>
+          <div class="profile-photo">
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    
+  </script>
+
+</body>
+
+</html>
+
+<!-- JavaScript -->
+<!-- Include any JavaScript code specific to the mentee dashboard if needed -->
+</body>
+</html>

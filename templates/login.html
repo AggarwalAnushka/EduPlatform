@@ -7,6 +7,20 @@
   <title>Login Form | Dan Aleko</title>
   <link rel="stylesheet" href="{{url_for('static',filename='css/loginStyles.css')}}">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: url(.template/images/bg.jpg) no-repeat; */
+  /* background-color: pink ; */
+  /* background: url(./images/bg.jpg) no-repeat; */
+  background: url("{{ url_for('static',filename='images/bg.jpg')}}") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+  </style>
 </head>
 
 <body>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentor Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{url_for('static',filename='css/mentor_dashboard.css')}}">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <h2>EDU<span class="danger">TOME</span></h2>
+        </div>
+        <div class="close" id="close-btn">
+          <span class="material-icons-sharp"> close </span>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <a href="/dashboard" class="active">
+          <span class="material-icons-sharp">dashboard </span>
+          <h3>Main Dashboard</h3>
+        </a>
+        <a href="/mentee_dashboard" class="active">
+          <span class="material-icons-sharp"> dashboard </span>
+          <h3>Mentee Dashboard</h3>
+        </a>
+        <a href="/logout">
+          <span class="material-icons-sharp"> logout </span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <h1>Mentor Dashboard</h1>
+
+      <div class="recent-orders">
+        <h2>Your Classes</h2>
+        <table id="recent-orders--table">
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Mentor</th>
+              <th>Date</th>
+              <th>Time Slot</th>
+              <th>Semester</th>
+              <!-- <th>Rating</th> -->
+              <th>Duration</th>
+              <!-- <th>Joining Link</th> -->
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for class in classes %}
+              <tr>
+                <td>{{ class.get('topic') }}</td>
+                <td>{{ mentor.get('fullname') }}</td>
+                <td>{{ class.get('date') }}</td>
+                <td>{{ class.get('time_slot') }}</td>
+                <td>{{ class.get('semester') }}</td>
+                <td>{{ class.get('duration') }}</td>
+                <td>
+                  <a href="{{ class.get('joining_link')}}">Joining Link</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </main>
+      
+   
+
+    <div class="right">
+      <div class="top">
+        <button id="menu-btn">
+          <span class="material-icons-sharp"> menu </span>
+        </button>
+        <div class="profile">
+          <div class="info">
+            <p>Hey, <b>{{ mentor.get('fullname')}}</b></p>
+          </div>
+          <div class="profile-photo">
+          </div>
+        </div>
+      </div>
+      <div class="Add-classes">
+        
+        <h2>Add Classes</h2>
+      
+     
+      <!-- Add updates div here | JS insertion -->
+      <form method="post" action="{{ url_for('add_class') }}">
+
+        <div class="input-box">
+
+        <label for="topic">Topic:</label>
+        <input type="text" name="topic" required>
+
+        </div>
+
+        <div class="input-box">
+
+          <label for="date">Date:</label>
+          <input type="date" name="date" required>
+  
+        </div>
+
+        <div class="input-box">
+
+          <label for="time_slot">Time Slot:</label>
+          <input type="text" name="time_slot" required>
+  
+        </div>
+
+        <div class="input-box">
+
+        
+          <label for="semester">Semester:</label>
+          <input type="text" name="semester" required>
+  
+        </div>
+
+        <div class="input-box">
+
+          <label for="rating">Rating:</label>
+          <input type="number" name="rating" step="0.1" required>
+  
+        </div>
+
+        <div class="input-box">
+ 
+        <label for="duration">Duration:</label>
+        <input type="text" name="duration" required>
+  
+        </div>
+
+        <div class="input-box">
+
+        <label for="joining_link">Joining Link:</label>
+        <input type="text" name="joining_link" required>
+  
+        </div>
+        <button type="submit" class = "btn">Add Class</button>
+        <!-- <input type="submit" value="Add Class"> -->
+    </form>
+    </div>
+
+
+   
+    </div>
+  </div>
+
+  <!-- <script src="{{ url_for('static', filename='assets/constants/recent-order-data.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/constants/update-data.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/constants/sales-analytics-data.js') }}"></script> -->
+  <!-- <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script> -->
+
+  <!-- <script src="static/assets/constants/recent-order-data.js"></script>
+  <script src="static/assets/constants/update-data.js"></script>
+  <script src="static/assets/constants/sales-analytics-data.js"></script> -->
+  <!-- <script src="static/assets/js/dashboard.js"></script> -->
+
+  <script type="text/javascript">
+    
+  </script>
+
+</body>
+
+</html>
