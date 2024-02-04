@@ -400,15 +400,84 @@ main .recent-orders a {
   display: flex;
   gap: 2rem;
   text-align: right;
+  font-size: 19px;
 }
 
 /* START RECENT UPDATES */
-.right .recent-updates {
+.Add-classes {
+  width: 100%;
+  height: 93%;
+   /* background-color: rgb(252, 247, 249); */
+ /* background-color: var(--color-light); */
+  background-color: var(--color-white);
+  /* background-color: rgb(26, 120, 170); */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(9px);
+  /* color: palevioletred; */
+  border-radius: 12px;
+  padding: 30px 40px;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  text-align: left;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+.right h2 {
+  /* margin-top: 0.5rem; */
+  font-size: 25px;
+  text-align: center;
+  
+}
+.input-box {
   margin-top: 1rem;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  margin: 30px 0;
 }
-.right .recent-updates h2 {
-  margin-bottom: 0.8rem;
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(194, 224, 255);
+  /* margin-top: 1rem; */
+
+  border: 0px solid black;
+  border-radius: 40px;
+  font-size: 16px;
+  color:black;
+  padding: 20px 45px 20px 20px;
 }
+/* .input-box input::placeholder {
+  color: rgb(245, 241, 204);
+} */
+.btn {
+  margin-top: 1rem;
+  width: 100%;
+  height: 45px;
+  background-color: rgb(55, 55, 200);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color:white;
+  font-weight: 600;
+}
+/* .right.Add-classes .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+} */
 .right .recent-updates .updates {
   background: var(--color-white);
   padding: var(--card-padding);
@@ -493,144 +562,8 @@ main .recent-orders a {
 /* END SALES ANALYTICS */
 /* END RIGHT SECTION */
 
-/* START MEDIA QUERIES */
-/* TABLETS AND SMALL LAPTOPS */
-@media screen and (max-width: 1200px) {
-  .container {
-    width: 94%;
-    grid-template-columns: 7rem auto 23rem;
-  }
-  aside .logo h2 {
-    display: none;
-  }
-  aside .sidebar h3 {
-    display: none;
-  }
-  aside .sidebar a {
-    width: 5.6rem;
-  }
-  aside .sidebar a:last-child {
-    position: relative;
-    margin-top: 1.8rem;
-  }
-  main .insights {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  main .recent-orders {
-    width: 94%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 2rem 0 0 8.8rem;
-  }
-  main .recent-orders table {
-    width: 83vw;
-  }
-  main .recent-orders table thead tr th:first-child,
-  main .recent-orders table thead tr th:last-child {
-    display: none;
-  }
-  main .recent-orders table tbody tr td:first-child,
-  main .recent-orders table tbody tr td:last-child {
-    display: none;
-  }
-}
 
-/* SMALL TABLETS AND MOBILE */
-@media screen and (max-width: 768px) {
-  .container {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
-  aside {
-    position: fixed;
-    left: -100%;
-    background: var(--color-white);
-    width: 18rem;
-    z-index: 3;
-    box-shadow: 1rem 3rem 4rem var(--color-light);
-    height: 100vh;
-    padding-right: var(--card-padding);
-    display: none;
-    animation: showMenu 400ms ease forwards;
-  }
-  @keyframes showMenu {
-    to {
-      left: 0;
-    }
-  }
-  aside .logo {
-    margin-left: 1rem;
-  }
-  aside .logo h2 {
-    display: inline;
-  }
-  aside .sidebar h3 {
-    display: inline;
-  }
-  aside .sidebar a {
-    width: 100%;
-    height: 3.4rem;
-  }
-  aside .sidebar a:last-child {
-    position: absolute;
-    bottom: 5rem;
-  }
-  aside .close {
-    display: inline-block;
-    cursor: pointer;
-  }
-  main {
-    margin-top: 8rem;
-    padding: 0 1rem;
-  }
-  main .recent-orders {
-    position: relative;
-    margin: 3rem 0 0 0;
-    width: 100%;
-  }
-  main .recent-orders table {
-    width: 100%;
-    margin: 0;
-  }
-  .right {
-    width: 94%;
-    margin: 0 auto 4rem;
-  }
-  .right .top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    align-items: center;
-    padding: 0 0.8rem;
-    height: 4.6rem;
-    background: var(--color-white);
-    width: 100%;
-    margin: 0;
-    z-index: 2;
-    box-shadow: 0 1rem 1rem var(--color-light);
-  }
-  .right .top .theme-toggler {
-    width: 4.4rem;
-    position: absolute;
-    left: 66%;
-  }
-  .right .top .profile .info {
-    display: none;
-  }
-  .right .top button {
-    display: inline-block;
-    background: transparent;
-    cursor: pointer;
-    color: var(--color-dark);
-    position: absolute;
-    left: 1rem;
-  }
-  .right .top button span {
-    font-size: 2rem;
-  }
-}
+
 /* END MEDIA QUERIES */
 
   </style>
@@ -703,8 +636,9 @@ main .recent-orders a {
           </tbody>
         </table>
       </div>
-
     </main>
+      
+   
 
     <div class="right">
       <div class="top">
@@ -719,35 +653,70 @@ main .recent-orders a {
           </div>
         </div>
       </div>
-
       <div class="Add-classes">
+        
         <h2>Add Classes</h2>
-        <!-- Add updates div here | JS insertion -->
-        <form method="post" action="{{ url_for('add_class') }}">
-          <label for="topic">Topic:</label>
-          <input type="text" name="topic" required><br>
-  
+      
+     
+      <!-- Add updates div here | JS insertion -->
+      <form method="post" action="{{ url_for('add_class') }}">
+
+        <div class="input-box">
+
+        <label for="topic">Topic:</label>
+        <input type="text" name="topic" required>
+
+        </div>
+
+        <div class="input-box">
+
           <label for="date">Date:</label>
-          <input type="date" name="date" required><br>
+          <input type="date" name="date" required>
   
+        </div>
+
+        <div class="input-box">
+
           <label for="time_slot">Time Slot:</label>
-          <input type="text" name="time_slot" required><br>
+          <input type="text" name="time_slot" required>
   
+        </div>
+
+        <div class="input-box">
+
+        
           <label for="semester">Semester:</label>
-          <input type="text" name="semester" required><br>
+          <input type="text" name="semester" required>
   
+        </div>
+
+        <div class="input-box">
+
           <label for="rating">Rating:</label>
-          <input type="number" name="rating" step="0.1" required><br>
+          <input type="number" name="rating" step="0.1" required>
   
-          <label for="duration">Duration:</label>
-          <input type="text" name="duration" required><br>
+        </div>
+
+        <div class="input-box">
+ 
+        <label for="duration">Duration:</label>
+        <input type="text" name="duration" required>
   
-          <label for="joining_link">Joining Link:</label>
-          <input type="text" name="joining_link" required><br>
+        </div>
+
+        <div class="input-box">
+
+        <label for="joining_link">Joining Link:</label>
+        <input type="text" name="joining_link" required>
   
-          <input type="submit" value="Add Class">
-      </form>
-      </div>
+        </div>
+        <button type="submit" class = "btn">Add Class</button>
+        <!-- <input type="submit" value="Add Class"> -->
+    </form>
+    </div>
+
+
+   
     </div>
   </div>
 

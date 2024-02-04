@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/signupStyles.css')}}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="/signup" method="POST" class="auth-form">
+            <h1>Sign Up</h1>
+            <div class="input-box">
+                <label for = "fullname">Full Name:</label>
+                <input type="text" id="fullname" name= "fullname" required>
+                
+            </div>
+            <div class="input-box">
+                <label for = "username">User Name:</label>
+                <input type="text" id="username" name= "username" required>
+                
+            </div>
+            <div class="input-box">
+                <label for = "college">College:</label>
+                <input type="text" id="college" name= "college" required>
+                
+            </div>
+            <div class="input-box">
+                <label for = "semester">Semester:</label>
+                <input type="number" id="semester" name= "semester" required>
+                
+            </div>
+            <div class="input-box">
+                <label for = "email">Email ID:</label>
+                <input type="email" id="email" name= "email" required>
+                
+            </div>
+            
+            <div class="input-box">
+                <label for = "password">Password (Atleast 6 characters long) :</label>
+                <input type="password" id="password" name= "password" required>
+                
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember Me</label>
+            </div>
+            <!-- <a href="dashboardCommon.html" class="btn">Login</a> -->
+            
+              <button type="submit" class = "btn">Sign Up</button>
+            
+           
+           <!-- <a href="/dashboard" class="btn">SignUp</a> -->
+        </form>
+    </div>
+</body>
+
+</html>
