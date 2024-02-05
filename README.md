@@ -23,7 +23,6 @@ The mentor-mentee relationship extends beyond academics, offering valuable insig
 Features:
 
 1) Serve as a Mentor:
-![1](https://github.com/AggarwalAnushka/EduPlatform/assets/104836096/4955554d-2497-4c23-ada1-a89d72dd39eb)
 
 -> Professional Growth: Enhance leadership and communication skills.
 -> Networking Opportunities: Cultivate industry connections for future collaborations.
